@@ -12,6 +12,12 @@ WHERE product_category_name = 'artes'
 
 Ex2: Quantos produtos tem mais de 5 litros?
 
+SELECT count(*) as Quantidade,  count(distinct product_id) from tb_products
+
+WHERE product_length_cm * product_height_cm * product_width_cm / 1000> 5
+
+--limit 100
+
 Ex3: Crie uma coluna nova que contenha a informação de volume em m3
 
 Ex4: Quantos produtos de 'beleza_saude' com menos de 1 litro?
