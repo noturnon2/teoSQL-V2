@@ -1,4 +1,14 @@
 -- x1. Faça uma query que apresente o tamanho médio, máximo e mínimo da descrição do objeto por categoria
+SELECT product_category_name,
+	   round(avg(product_description_lenght), 2) as Tam_medio_descr,
+       max(product_description_lenght) as Tam_max_descr,
+       min(product_description_lenght) as Tam_min_descr
+from tb_products
+
+order BY product_category_name
+
+---Resposta:
+-- 771.5 | 3992 | 4
 
 -- Ex2. Faça uma query que apresente o tamanho médio, máximo e mínimo do nome do objeto por categoria
 
